@@ -4,16 +4,15 @@ document.addEventListener('DOMContentLoaded', function() {
     const scrollHandler = () => {
         counters.forEach(counter => {
             const rect = counter.getBoundingClientRect();
-            // تحقق من أن العنصر في viewport
             if (rect.top < window.innerHeight && rect.bottom >= 0) {
                 const updateCount = () => {
                     const target = +counter.getAttribute('data-target');
                     const count = +counter.querySelector('.number').textContent;
-                    const increment = target / 100; // زيادة بنسبة 1/100 من الهدف
+                    const increment = target / 100; 
                     
                     if (count < target) {
                         counter.querySelector('.number').textContent = Math.ceil(count + increment);
-                        setTimeout(updateCount, 10); // تحديث كل 10 ميلي ثانية
+                        setTimeout(updateCount, 10); 
                     } else {
                         counter.querySelector('.number').textContent = target;
                     }
@@ -24,5 +23,5 @@ document.addEventListener('DOMContentLoaded', function() {
     };
 
     window.addEventListener('scroll', scrollHandler);
-    scrollHandler(); // تحقق أولي عند تحميل الصفحة
+    scrollHandler(); 
 });

@@ -1,20 +1,23 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
 body {
     margin: 0;
     font-family: Arial, sans-serif;
     overflow-x: hidden;
 }
-.about{
+
+.about {
     width: 100%;
     background-image: url(../images/photo_2024-08-21_11-13-42.jpg);
     height: 50vh;
     position: relative;
 }
-.about .about-title{
+
+.about .about-title {
     color: white;
     font-size: 25px;
     text-align: center;
@@ -24,60 +27,60 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
 }
+
 .line {
     width: 100px;
     height: 2px;
     background-color: #333;
     margin: 15px auto;
-  }
-  
-  .about-img {
+}
+
+.about-img {
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
     gap: 20px;
     padding: 10px;
-  }
-  
-  .about-img img {
+}
+
+.about-img img {
     width: 40%;
     max-width: 370px;
     height: auto;
     object-fit: cover;
     height: 250px;
-  }
-  
-  .about-text {
+}
+
+.about-text {
     width: 55%;
     padding: 10px;
-  }
-  
-  .about-img p {
+}
+
+.about-img p {
     font-size: 17px;
     font-weight: 400;
-  }
-  
-  /* تصميم خاص لشاشات الموبايل */
-  @media (max-width: 768px) {
+}
+
+@media (max-width: 768px) {
     .about-img {
-      flex-direction: column-reverse;
-      align-items: center;
+        flex-direction: column-reverse;
+        align-items: center;
     }
-  
+
     .about-img img {
-      width: 100%;
-      height: auto;
+        width: 100%;
+        height: auto;
     }
-  
+
     .about-text {
-      width: 100%;
-      text-align: center;
+        width: 100%;
+        text-align: center;
     }
-  }
+}
 
 
 
-  .sec6parent {
+.sec6parent {
     background-image: url(../images/photo_2024-08-21_11-13-42.jpg);
     width: 100vw;
     height: 50vh;
@@ -86,76 +89,74 @@ body {
     background-position: center;
     position: relative;
     margin-top: 62px;
-  }
+}
 
-  .sec6child {
+.sec6child {
     width: 100%;
     height: 100%;
     position: absolute;
     display: flex;
     justify-content: center;
     align-items: center;
-  }
-  .about-text-2{
+}
+
+.about-text-2 {
     display: flex;
     flex-direction: column;
     justify-content: center;
     gap: 20px;
-  }
-  .about-text-2 h3{
-    text-decoration: underline ;
 }
-.about-img-2{
+
+.about-text-2 h3 {
+    text-decoration: underline;
+}
+
+.about-img-2 {
     background-color: gray;
 }
+
 /* /////////////////// */
 .rewards-section {
     background-color: #f8f8f8;
     padding: 20px 0;
-  }
-  
- 
-  
-  .marquee {
+}
+
+.marquee {
     overflow: hidden;
     white-space: nowrap;
     box-sizing: border-box;
-  }
-  
-  .marquee-content {
+    position: relative;
+}
+
+.marquee-content {
     display: inline-block;
-    padding-left: 100%;
-    animation: marquee 15s linear infinite;
-  }
-  
-  .marquee-content span {
+    animation: marquee 30s linear infinite;
+}
+
+.marquee-content span {
     display: inline-block;
     margin-right: 30px;
     font-size: 24px;
     color: #333;
-  }
-  .marquee-content span img{
-   width: 130px;
-   height: 100px;
-  }
-  .marquee  .marquee-title{
+}
+
+.marquee-content span img {
+    width: 130px;
+    height: 100px;
+}
+
+.marquee .marquee-title {
     text-align: center;
     padding: 10px;
     font-size: 45px;
     font-weight: 800;
-  }
-  
-  @keyframes marquee {
+}
+
+@keyframes marquee {
     0% {
-      transform: translate(0, 0);
+        transform: translateX(0);
     }
     100% {
-      transform: translate(-100%, 0);
+        transform: translateX(-50%);
     }
-  }
-  
-
-
-
-
-
+}
