@@ -12,11 +12,16 @@
       integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
       crossorigin="anonymous"
     />
+    <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+/>
+
   </head>
   <body dir="rtl">
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-light bg-blue">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#"> تلال الجبال</a>
+        <a class="navbar-brand text-white" href="#">تلال الجبال</a>
         <button
           class="navbar-toggler"
           type="button"
@@ -28,19 +33,20 @@
         >
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="collapse navbar-collapse full-screen-navbar" id="navbarSupportedContent">
+          <button class="close-navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-label="Close">
+            &times;
+          </button>
           <ul class="navbar-nav m-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="index.html"
-                >الرئسيه</a
-              >
+              <a class="nav-link active text-white" aria-current="page" href="index.html">الرئسيه</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="about.html">نبذه عنا</a>
+              <a class="nav-link text-white" href="about.html">نبذه عنا</a>
             </li>
             <li class="nav-item dropdown">
               <a
-                class="nav-link dropdown-toggle"
+                class="nav-link dropdown-toggle text-white"
                 href="#"
                 id="navbarDropdown"
                 role="button"
@@ -57,15 +63,16 @@
               </ul>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">المدونه / مشاريعنا</a>
+              <a class="nav-link text-white" href="#">المدونه / مشاريعنا</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">اتصل بنا</a>
+              <a class="nav-link text-white" href="#">اتصل بنا</a>
             </li>
           </ul>
         </div>
       </div>
     </nav>
+    
 
     <div
       id="carouselExampleIndicators"
@@ -139,13 +146,11 @@
     </div>
 
     <div class="container text-center my-5 p-3 main-section">
-      <h2 class="lead text-muted">الرئسيه</h2>
+      <h2 class="lead text-muted">{{_("main")}}</h2>
       <h1 class="main-main">
-        نختص في المقاولات العامة وتأجير المعدات
-        <br />
-        ديكورات خرسانية, خرسانة مطبوعة
-        <div class="main-line"></div>
+        نختص في المقاولات العامة وتأجير المعدات ديكورات خرسانية, خرسانة مطبوعة
       </h1>
+      <div class="main-line"></div>
       <h3>المملكة العربية السعودية</h3>
       <h3>تاسست شركة تلال الجبال للمقاولات في المملكة العربية السعودية</h3>
       <h3>
@@ -158,7 +163,7 @@
 
     <div>
       <div class="text-center">
-        <h2>نحن متخصصون في</h2>
+        <h2>{{_("services")}}</h2>
         <div class="line mt-2"></div>
       </div>
       <div class="flip-section">
@@ -254,12 +259,16 @@
             </div>
           </div>
         </div>
+
+        
+
+
       </div>
     </div>
 
     <section class="container mt-4">
       <div class="text-center why">
-        <h2 class="text-center">لماذا تختارنا ؟</h2>
+        <h2 class="text-center">{{_("why")}}</h2>
         <div class="line mt-2"></div>
       </div>
       <div class="why-p">
@@ -351,6 +360,7 @@
         <span class="number">0</span>
       </div>
     </section>
+
     <footer dir="ltr" class="footer-section">
       <div class="container">
         <div class="footer-cta pt-5 pb-5">
@@ -400,12 +410,16 @@
                               <p>Lorem ipsum dolor sit amet, consec tetur adipisicing elit, sed do eiusmod tempor incididuntut consec tetur adipisicing
                               elit,Lorem ipsum dolor sit amet.</p>
                           </div> -->
-                <div class="footer-social-icon">
-                  <span>Follow us</span>
-                  <a href="#"><i class="fab fa-facebook-f facebook-bg"></i></a>
-                  <a href="#"><i class="fab fa-twitter twitter-bg"></i></a>
-                  <a href="#"><i class="fab fa-google-plus-g google-bg"></i></a>
-                </div>
+                          <div class="footer-social-icon">
+                            <span>Follow us</span>
+                            <a href="#"><i class="fab fa-whatsapp"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-tiktok"></i></a>
+                            <a href="#"><i class="fab fa-google"></i></a>
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                          </div>
+                          
+                          
               </div>
             </div>
             <div class="col-xl-4 col-lg-4 col-md-6 mb-30">
@@ -414,16 +428,12 @@
                   <h3>Useful Links</h3>
                 </div>
                 <ul>
-                  <li><a href="#">Home</a></li>
-                  <li><a href="#">about</a></li>
-                  <li><a href="#">services</a></li>
-                  <li><a href="#">portfolio</a></li>
-                  <li><a href="#">Contact</a></li>
-                  <li><a href="#">About us</a></li>
-                  <li><a href="#">Our Services</a></li>
-                  <li><a href="#">Expert Team</a></li>
-                  <li><a href="#">Contact us</a></li>
-                  <li><a href="#">Latest News</a></li>
+                  <li><a href="index.html">الرئسيه</a></li>
+                  <li><a href="about.html">نبذه عنا</a></li>
+                  <li><a href="#">انشاءت</a></li>
+                  <li><a href="#">تاجير معدات</a></li>
+                  <li><a href="#">المدونه / مشاريعنا</a></li>
+             
                 </ul>
               </div>
             </div>
