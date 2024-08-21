@@ -120,141 +120,86 @@ body {
     }
   }
 
-  /* ///////////////////////////////////////// */
-
-  .sec6parent {
-    background-image: url(../images/photo_2024-08-21_11-13-42.jpg);
-    width: 100vw;
-    height: 50vh;
-    background-attachment: fixed;
-    background-size: cover;
-    background-position: center;
-    position: relative;
-    margin-top: 62px;
-  }
-  
-  .sec6child {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .sec6contaner {
-    width: 100%;
-    padding: 0px 20px;
-    display: flex;
-    justify-content: space-between; 
-    align-items: center; 
-    flex-wrap: wrap;
-  }
-  
-  .divtext {
-    color: white;
-    width: 53%; /* عرض النص بالنصف */
-    text-align: left; /* محاذاة النص لليسار */
-    margin-right: 20px; /* مسافة بين النص و الـ input */
-  }
-  
-  .divinput {
-    width: 45%; /* عرض الـ input بالنصف */
-    position: relative;
-    display: flex; /* جعل الزر والـ input في نفس السطر */
-    align-items: center; /* محاذاة العناصر عموديًا داخل الـ divinput */
-  }
-  
-  .divinput input {
-    width: 100%; /* عرض الـ input بحيث يبقى مكان للزر */
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    outline: none;
-    box-sizing: border-box;
-  }
-  
-  .go-button {
-    position: absolute;
-    top: 50%;
-    left: 10px; 
-    transform: translateY(-50%);
-    padding: 3px 20px;
-    border: none;
-    border-radius: 5px;
-    background-color: #007bff; 
-    color: white;
-    cursor: pointer;
-  }
-  
-  .go-button:hover {
-    background-color: #0056b3; 
-  }
-
+ 
   /* //////////////////////////// */
-.why .line{
+  .line {
     width: 100px;
     height: 2px;
     background-color: #414042;
     margin: 15px auto;
-}  
-.why-p p {
+  }
+  
+  .why-p p {
     color: #414042;
     font-size: 20px;
     font-weight: 600;
-
-}
-.why-content {
+  }
+  
+  .why-content {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 20px;
     padding: 10px;
   }
   
-  .why-content > div {
+  .why-card-parent {
     display: flex;
-    align-items: flex-start; 
-    gap: 10px;
-    width: calc(50% - 10px); 
+    align-items: center;
+    gap: 20px;
+    width: calc(50% - 10px);
+    flex-direction: row-reverse; /* لجعل النصوص تظهر بجانب الصور */
   }
   
-  .why-content > div > div {
-    flex: 1; 
+  .why-card-parent img {
+    width: 30%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+    height: 120px;
+
   }
   
-  .why-content h2 {
-    margin: 0;
-    font-size: 1.5em; 
+  .why-card {
+    flex: 1;
+    text-align: right; /* لمحاذاة النصوص لليمين */
   }
   
-  .why-content p {
-    margin: 0.5em 0; 
-  }
-  
-  .why-content img {
-    width: 25%; 
-    height: 100px; 
-    object-fit: cover; 
-  }
-  .why-card h2{
+  .why-card h2 {
     color: #414042;
     font-size: 20px;
+    margin-bottom: 10px;
   }
+  
   .why-card p {
     font-size: 17px;
   }
   
-
-
+  @media (max-width: 768px) {
+    .why-card-parent {
+      flex-direction: column;
+      width: 100%;
+    }
+  
+    .why-card-parent img {
+      width: 50%;
+      order: -1; 
+    }
+  
+    .why-card {
+      text-align: center;
+      padding: 20px;
+    }
+  }
+  
   #counters {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     padding: 20px;
-}
-
-.counter {
+  }
+  
+  .counter {
     background: blue;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -267,28 +212,29 @@ body {
     flex-direction: column;
     gap: 10px;
     color: white;
-}
-
-.counter:hover {
+  }
+  
+  .counter:hover {
     background: #e0e0e0;
-}
-
-.counter .number {
+  }
+  
+  .counter .number {
     font-size: 2em;
     color: white;
-}
-
-@media (max-width: 768px) {
+  }
+  
+  @media (max-width: 768px) {
     .counter {
-        width: 45%;
+      width: 45%;
     }
-}
-
-@media (max-width: 480px) {
+  }
+  
+  @media (max-width: 480px) {
     .counter {
-        width: 90%;
+      width: 90%;
     }
-}
+  }
+  
 
 
 /* //////////////////// */
